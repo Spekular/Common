@@ -25,6 +25,9 @@ object Vec2Int {
 }
 
 case class Vec2Float (x: Float, y: Float) {
+	def xy = this
+	def yx = Vec2(y, x)
+
 	def +(that: Vec2Float) = Vec2(x + that.x, y + that.y)
 	def -(that: Vec2Float) = Vec2(x - that.x, y - that.y)
 	def *(that: Vec2Float) = Vec2(x * that.x, y * that.y)
